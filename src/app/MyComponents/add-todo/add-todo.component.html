@@ -1,0 +1,37 @@
+<div class="text-white m-3">
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-6">
+      <label for="title" class="block mb-2 text-sm font-medium"
+        >Todo Title</label
+      >
+      <input
+        type="text"
+        id="title"
+        name="title"
+        [(ngModel)]="title"
+        class="shadow-sm bg-gray-200 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-black"
+        required
+      />
+    </div>
+    <div class="mb-6">
+      <label for="desc" class="block mb-2 text-sm font-medium"
+        >Todo Description</label
+      >
+      <textarea
+        id="desc"
+        class="shadow-sm border border-gray-300 text-sm rounded-lg block w-full p-2.5 bg-gray-200 text-black"
+        cols="30"
+        rows="2"
+        name="desc"
+        [(ngModel)]="desc"
+        required
+      ></textarea>
+    </div>
+    <button
+      type="submit"
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+    >
+      Add Todo
+    </button>
+  </form>
+</div>
