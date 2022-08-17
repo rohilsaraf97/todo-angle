@@ -1,0 +1,18 @@
+<div class="m-3 rounded-md bg-gray-500 px-3 py-5 text-white">
+  <div class="flex justify-between items-center">
+    <div>
+      <h1 class="text-2xl font-bold">
+        {{ todo.title }}
+      </h1>
+      <p class="text-sm italic">
+        {{ todo.desc }}
+      </p>
+    </div>
+    <div
+      class="p-3 bg-gray-400 rounded-md shadow-sm hover:scale-105 cursor-pointer"
+      (click)="onDelete(todo.sno)"
+    >
+      <span class="text-3xl"> 🗑 </span>
+    </div>
+  </div>
+</div>
