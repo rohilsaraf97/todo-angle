@@ -9,6 +9,7 @@ import { Todo } from 'src/Todo';
 export class TodoComponent implements OnInit {
   @Input() todo: Todo;
   @Output() todoDelete: EventEmitter<number> = new EventEmitter();
+  @Output() todoDone: EventEmitter<number> = new EventEmitter();
 
   constructor() {}
 
@@ -16,5 +17,8 @@ export class TodoComponent implements OnInit {
   onDelete(sno: number) {
     this.todoDelete.emit(sno);
     console.log(sno);
+  }
+  onMarkAsDone() {
+    this.todoDone.emit(this.todo.sno);
   }
 }

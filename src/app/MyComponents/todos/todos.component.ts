@@ -17,6 +17,10 @@ export class TodosComponent implements OnInit {
   handleDelete(sno: number) {
     this.todos = this.todos.filter((todo) => todo.sno != sno);
   }
+  handleDone(sno: number) {
+    let foundIndex = this.todos.findIndex((x) => x.sno === sno);
+    this.todos[foundIndex].active = !this.todos[foundIndex].active;
+  }
   handleAdd(todo: Todo) {
     this.todos = [todo, ...this.todos];
   }
